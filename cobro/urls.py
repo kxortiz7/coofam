@@ -13,9 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from msilib.schema import ListView
 from django.contrib import admin
 from django.urls import path
+from cobro.views import RtarjetaListView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', RtarjetaListView.as_view()),
 ]

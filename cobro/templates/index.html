@@ -1,13 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>    
+    <link rel="stylesheet" href="../static/css/cobro.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
 </head>
 <body>
-    
+   <header class="header-cobro">
+     <a href="">Inicio</a>
+   </header>
+    <h2>Bienvenidos</h2>
+   
+    <table class="table">
+    <thead>
+
+     
+      <tr>
+        <th scope="col">Cliente</th>
+        <th scope="col">Pagaduria</th>
+        <th scope="col">Banco</th>
+        <th scope="col">Clave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for Tarjeta in object_list %}        
+        <td>{{ Tarjeta.cliente }}</td>
+        <td>{{ Tarjeta.pagaduria }}</td>
+        <td>{{ Tarjeta.banco }}</td>
+        <td>{{ Tarjeta.clave}}</td>
+        {% endfor %}
+      </tr>
+      
+
+      
+    </tbody>
+  </table>
+
+
+    <script src="../static/js/main.js"></script>
 </body>
 </html>
 

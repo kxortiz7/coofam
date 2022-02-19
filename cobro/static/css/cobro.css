@@ -1,0 +1,13 @@
+.root{
+    margin: 0;
+    font-size: 0;
+    display: flex;
+}
+
+.header-cobro{
+background-color:rgb(37, 109, 109);
+color:white;
+padding: 10px;
+
+
+};
